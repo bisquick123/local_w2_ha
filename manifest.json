@@ -1,0 +1,16 @@
+{
+  "domain": "w2",
+  "name": "pwrmicro",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/w2",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": [
+    "@christopherharper77"
+  ],
+  "iot_class": "local_polling",
+  "version": "1.0.1"
+}
