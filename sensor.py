@@ -29,6 +29,8 @@ import random
 # This is taken from init
 PLATFORMS: list[Platform] = [Platform.SENSOR]
 
+IP_ADDR = "192.168.2.66"
+
 
 async def async_setup_entry(
     hass: HomeAssistant, entry: ConfigEntry, async_add_entities
@@ -73,7 +75,7 @@ class W2SensorPower(SensorEntity):
 
     def __init__(self, hass):
         self._hass = hass
-        self.energy_meter = EnergyMeter("192.168.2.66")  # Get this from the config
+        self.energy_meter = EnergyMeter(IP_ADDR)  # Get this from the config
 
     @property
     def name(self):
@@ -122,7 +124,7 @@ class W2SensorEnergy(SensorEntity):
 
     def __init__(self, hass):
         self._hass = hass
-        self.energy_meter = EnergyMeter("192.168.1.19")  # Get this from the config
+        self.energy_meter = EnergyMeter(IP_ADDR)  # Get this from the config
 
     @property
     def name(self):
