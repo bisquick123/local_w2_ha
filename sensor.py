@@ -221,7 +221,7 @@ class ConsumptionSensorEnergy(W2SensorEnergy):
         This is the only method that should fetch new data for Home Assistant.
         """
         await self._hass.async_add_executor_job(self.energy_meter.refresh_data)
-        self._state = self.energy_meter.net_energy_imported
+        self._state = self.energy_meter.consumption_energy
 
 
 class GenerationSensorEnergy(W2SensorEnergy):

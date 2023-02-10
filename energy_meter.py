@@ -74,7 +74,7 @@ class EnergyMeter:
             elif channel_type == "SUBMETER":
                 self.submeter_power = power
                 self.submeter_energy = imported_energy
-        self._calculate_missing()
+        # self._calculate_missing()
 
     def _calculate_missing(self):
         """Calculate missing channel. Note: Generation is negative"""
